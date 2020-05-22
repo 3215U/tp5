@@ -2,8 +2,10 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+@Component
 public class Usuario {
-	private long id;;
+	private long id;
 	private String nombre;
 	private String apellido;
 	private LocalDate fechaNacimeinto;
@@ -12,6 +14,7 @@ public class Usuario {
 	private LocalDate fechaAlta;
 	private String tipo;
 	private String password;
+	
 	//Constructores
 	/**
 	 * @param id
