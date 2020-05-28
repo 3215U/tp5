@@ -2,6 +2,7 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,10 +12,16 @@ public class Cuota {
 	private String periodo;
 	private double monto;
 	private String estado;
+	@Autowired
 	private Usuario usuario;
 	
+	//constructor
+	public Cuota() {
+		// TODO Auto-generated constructor stub
+	}
 	
-	//COnstructores
+	
+	//Constructores
 	/**
 	 * @param id
 	 * @param fechaPago
@@ -68,6 +75,14 @@ public class Cuota {
 	}
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+	/**
+	 * Sobreescritura del metodo String
+	 */
+	@Override
+	public String toString() {
+		return "Cuota [id=" + id + ", fechaPago=" + fechaPago + ", periodo=" + periodo + ", monto=" + monto
+				+ ", estado=" + estado + ", usuario=" + usuario + "]";
 	}
 
 

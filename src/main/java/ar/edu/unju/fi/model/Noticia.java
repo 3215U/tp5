@@ -10,7 +10,11 @@ public class Noticia {
 	private String titulo;
 	private String resumen;
 	
-	
+
+	//constructor
+	public Noticia() {
+		// TODO Auto-generated constructor stub
+	}
 	//Constructores
 	/**
 	 * @param fecha
@@ -41,6 +45,13 @@ public class Noticia {
 	}
 	public void setResumen(String resumen) {
 		this.resumen = resumen;
+	}
+	/**
+	 * Sobreescritura del metodo String
+	 */
+	@Override
+	public String toString() {
+		return "Noticia [fecha=" + fecha + ", titulo=" + titulo + ", resumen=" + resumen + "]";
 	}
 	
 	

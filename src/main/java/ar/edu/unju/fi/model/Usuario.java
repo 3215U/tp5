@@ -15,6 +15,11 @@ public class Usuario {
 	private String tipo;
 	private String password;
 	
+
+	//constructor
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
 	//Constructores
 	/**
 	 * @param id
@@ -95,6 +100,16 @@ public class Usuario {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	/**
+	 * Sobreescritura del metodo String
+	 */
+	
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", fechaNacimeinto="
+				+ fechaNacimeinto + ", direccion=" + direccion + ", dni=" + dni + ", fechaAlta=" + fechaAlta + ", tipo="
+				+ tipo + ", password=" + password + "]";
 	}
 	
 	

@@ -11,6 +11,11 @@ public class Resultado {
 	private int golesEquipo1;
 	private int golesEquipo2;
 	
+
+	//constructor
+	public Resultado() {
+		// TODO Auto-generated constructor stub
+	}
 	//COnstructores
 	
 	/**
@@ -58,6 +63,14 @@ public class Resultado {
 	}
 	public void setGolesEquipo2(int golesEquipo2) {
 		this.golesEquipo2 = golesEquipo2;
+	}
+	/**
+	 * Sobreescritura del metodo String
+	 */
+	@Override
+	public String toString() {
+		return "Resultado [fecha=" + fecha + ", equipo1=" + equipo1 + ", equipo2=" + equipo2 + ", golesEquipo1="
+				+ golesEquipo1 + ", golesEquipo2=" + golesEquipo2 + "]";
 	}
 	
 	

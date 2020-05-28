@@ -17,6 +17,7 @@ public class Estadio {
 	private int capacidad;
 	private String direccion;
 	
+	//constructor
 	public Estadio() {
 		// TODO Auto-generated constructor stub
 	}
@@ -68,6 +69,16 @@ public class Estadio {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+	
+	/**
+	 * Sobreescritura del metodo String
+	 */
+	@Override
+	public String toString() {
+		return "Estadio [nombre=" + nombre + ", fechaFundacion=" + fechaFundacion + ", ciudad=" + ciudad
+				+ ", capacidad=" + capacidad + ", direccion=" + direccion + "]";
+	}
+	
 	
 	
 }

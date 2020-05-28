@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package ar.edu.unju.fi.repository;
 
 import org.slf4j.Logger;
@@ -7,40 +10,45 @@ import org.springframework.stereotype.Repository;
 
 import ar.edu.unju.fi.Benicio3215Tp5Application;
 import ar.edu.unju.fi.model.Usuario;
-@Repository("usuarioImp")
+
+/**
+ * @author Benicio Roxana
+ *
+ */
+
+@Repository
 
 public class UsuarioImp implements IUsuario {
-	
+
 	@Autowired
 	private Usuario usuario;
 	
-	public static Logger LOG =LoggerFactory.getLogger(Benicio3215Tp5Application.class);
-
+	public static Logger LOG = LoggerFactory.getLogger(Benicio3215Tp5Application.class);
+	
 	@Override
 	public void guardar() {
-		// accion ejecutada para guardar un obeto usuario en la BD
-		LOG.info("El usuario fue guardado " + usuario.getApellido() +", "+usuario.getNombre());
-		
-
+		// aacion ejecutada para guardar un objeto usuario en la BD;
+		LOG.info("El usuario fue guardado "+ usuario.getApellido() + " , "+usuario.getNombre());
 	}
 
 	@Override
 	public Usuario mostrar() {
-		// se recuperan todos los datos del usuario
+		// Se recuperan todos los datos de los usuario
 		LOG.info("Mostrar los datos del usuario");
 		return usuario;
 	}
 
 	@Override
 	public void eliminar() {
-		// se elimina el obeto usuario de la bd
-		LOG.info("Se eliminó el usuario de la bd");
+		// se elimina el objeto de la bd
+		LOG.info("Se elimino el usuario bd");
 	}
 
 	@Override
 	public Usuario modificar() {
-		// TODO Auto-generated method stub
-		return null;
+		//se modifico el objeto de la bd
+		LOG.info("Se modifico el usuario bd "+ usuario.getApellido() + " , "+usuario.getNombre());
+		return usuario;
 	}
 
 }
