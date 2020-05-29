@@ -78,6 +78,50 @@ public class Estadio {
 		return "Estadio [nombre=" + nombre + ", fechaFundacion=" + fechaFundacion + ", ciudad=" + ciudad
 				+ ", capacidad=" + capacidad + ", direccion=" + direccion + "]";
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + capacidad;
+		result = prime * result + ((ciudad == null) ? 0 : ciudad.hashCode());
+		result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
+		result = prime * result + ((fechaFundacion == null) ? 0 : fechaFundacion.hashCode());
+		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Estadio other = (Estadio) obj;
+		if (capacidad != other.capacidad)
+			return false;
+		if (ciudad == null) {
+			if (other.ciudad != null)
+				return false;
+		} else if (!ciudad.equals(other.ciudad))
+			return false;
+		if (direccion == null) {
+			if (other.direccion != null)
+				return false;
+		} else if (!direccion.equals(other.direccion))
+			return false;
+		if (fechaFundacion == null) {
+			if (other.fechaFundacion != null)
+				return false;
+		} else if (!fechaFundacion.equals(other.fechaFundacion))
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		return true;
+	}
 	
 	
 	

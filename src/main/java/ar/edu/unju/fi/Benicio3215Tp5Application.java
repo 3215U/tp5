@@ -12,10 +12,11 @@ import ar.edu.unju.fi.service.IUsuarioService;
 
 @SpringBootApplication
 public class Benicio3215Tp5Application implements CommandLineRunner {
+	
 	@Autowired
-	IUsuarioService usuarioService;
+	private Usuario usuario;
 	@Autowired
-	Usuario usuario;
+	private IUsuarioService usuarioService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Benicio3215Tp5Application.class, args);

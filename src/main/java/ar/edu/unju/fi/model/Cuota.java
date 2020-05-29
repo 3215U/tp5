@@ -86,4 +86,57 @@ public class Cuota {
 	}
 
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
+		result = prime * result + ((fechaPago == null) ? 0 : fechaPago.hashCode());
+		result = prime * result + (int) (id ^ (id >>> 32));
+		long temp;
+		temp = Double.doubleToLongBits(monto);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((periodo == null) ? 0 : periodo.hashCode());
+		result = prime * result + ((usuario == null) ? 0 : usuario.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cuota other = (Cuota) obj;
+		if (estado == null) {
+			if (other.estado != null)
+				return false;
+		} else if (!estado.equals(other.estado))
+			return false;
+		if (fechaPago == null) {
+			if (other.fechaPago != null)
+				return false;
+		} else if (!fechaPago.equals(other.fechaPago))
+			return false;
+		if (id != other.id)
+			return false;
+		if (Double.doubleToLongBits(monto) != Double.doubleToLongBits(other.monto))
+			return false;
+		if (periodo == null) {
+			if (other.periodo != null)
+				return false;
+		} else if (!periodo.equals(other.periodo))
+			return false;
+		if (usuario == null) {
+			if (other.usuario != null)
+				return false;
+		} else if (!usuario.equals(other.usuario))
+			return false;
+		return true;
+	}
+
+	
 }

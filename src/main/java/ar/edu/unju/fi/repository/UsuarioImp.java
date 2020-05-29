@@ -28,7 +28,7 @@ public class UsuarioImp implements IUsuario {
 	@Override
 	public void guardar() {
 		// aacion ejecutada para guardar un objeto usuario en la BD;
-		LOG.info("El usuario fue guardado "+ usuario.getApellido() + " , "+usuario.getNombre());
+		LOG.info("El usuario fue guardado "+ usuario.getApellido() + " , "+usuario.getNombre()+" fue guardado con EXITO");
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class UsuarioImp implements IUsuario {
 	@Override
 	public Usuario modificar() {
 		//se modifico el objeto de la bd
-		LOG.info("Se modifico el usuario bd "+ usuario.getApellido() + " , "+usuario.getNombre());
+//		LOG.info("Se modifico el usuario bd "+ usuario.getApellido() + " , "+usuario.getNombre());
 		return usuario;
 	}
 
